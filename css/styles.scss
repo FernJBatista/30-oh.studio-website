@@ -1,0 +1,534 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+:root {
+    --dark-gray: #7f7f7f;
+    --light-gray: #e8e5e4;
+    --light-gray-80: #e8e5e480;
+}
+
+//Breakpoints
+$breakpoint-mobile: 796px;
+$breakpoint-laptop: 1220px;
+
+//Headings
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-family: 'Inter', sans-serif;
+}
+
+h4 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-family: 'Inter', sans-serif;
+}
+
+h5 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-family: 'Inter', sans-serif;
+}
+
+.big {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.small {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed; //Check if menu stays on top
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1.5rem;
+    width: 100%;
+    z-index: 2;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 4px;
+        border-radius: 9999px;
+        background-color: var(--light-gray-80);
+        backdrop-filter: blur(14px);
+        gap: 0.25rem;
+
+        button {
+            font-family: 'Inter', sans-serif;
+            border: none;
+            padding: 0.725rem 1.5rem;
+            border-radius: 9999px;
+            color: black;
+            font-size: 0.825rem;
+            font-weight: 500;
+            max-width: 100px;
+            cursor: pointer;
+            background-color: transparent;
+
+            &:hover, .active {
+                background-color: white;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    section#hero {
+        margin-top: 2rem;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: clamp(1.5rem, 5vw, 4rem);
+        gap: 4rem;
+
+        h1 {
+            font-weight: 600;
+            max-width: 24ch;
+            line-height: 1.2;
+
+            @media screen and (min-width: 900px) { 
+                max-width: 16ch;
+            }
+        }
+
+        div#expertise {
+            display: none;
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: space-between;
+
+            @media screen and (min-width: 900px) { 
+                    display: flex;
+            }
+                
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: space-between;
+
+                li {
+                    padding: 0.5rem 1rem;
+                    background-color: var(--light-gray);
+                    border-radius: 9999px;
+                }
+            }
+        }
+    }
+
+    section#projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        padding: clamp(1.5rem, 5vw, 4rem);
+
+        @media screen and (min-width: 900px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            height: auto;
+
+            @media screen and (min-width: 900px) {
+                width: calc(50% - 1.5rem);
+            }
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                width: 100%;
+                aspect-ratio: 24/20;
+                border-radius: 1rem;
+                color: black;
+                padding: 0;
+                margin: 0;
+
+                figure, video {
+                    position: relative;
+                    width: 100%;
+                    aspect-ratio: 24/20;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: filter 0.4s ease-in-out;
+    
+                    &:hover {
+                        .imgHover {
+                            background-color: rgba(0, 0, 0, 0.3);
+                            backdrop-filter: blur(8px);
+    
+                            p {
+                                opacity: 1;
+                                transition: opacity 0.4s ease-in-out;
+                            }
+                        }
+
+                        .sphere {
+                            opacity: 1;
+                            transition: opacity 0.4s ease-in-out;
+                        }
+                    }
+
+                    .sphere {
+                        position: absolute;
+                        z-index: 2;
+                        right: 1rem;
+                        top: 1rem;
+                        opacity: 0;
+                        transition: opacity 0.4s ease-in-out;
+                    }
+    
+                    &#figureAire {
+                        background-image: url(https://framerusercontent.com/images/kfr022WaJ8YJUyZFmdwCB3pXhs.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figureCorrelated {
+                        background-image: url(https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=1024);
+                    }
+    
+                    &#articleChannel5 {
+                        background-image: url(https://framerusercontent.com/images/AX9PukosNfGVcfXw3YapiYpl9g.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figureRonald {
+                        background-image: url(https://framerusercontent.com/images/BAXywubxN8sAhfJg3AgGgFI.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figurePropeller {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                        object-fit: cover;
+                        position: relative;
+    
+                        div.imgHover {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            justify-content: space-between;
+                            top: 0;
+                            width: 100%;
+                        }
+                    }
+    
+                    &#figureSchuh {
+                        background-image: url(https://framerusercontent.com/images/3WALBX7nnuG7p85CLjlVmWPDHw.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figurePaperstreet {
+                        background-image: url(https://framerusercontent.com/images/e3moUZXfgtjYQY4ILakIMaz4n7s.jpg?scale-down-to=2048);
+                    }
+    
+                    &#figureOhSupply {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                        object-fit: cover;
+                        position: relative;
+    
+                        div.imgHover {
+                            position: absolute;
+                            top: 0;
+                        }
+                    }
+    
+                    &#figureMonokelEyewear {
+                        background-image: url(https://framerusercontent.com/images/aH1eUgCIIIrbJF7TUlaKAehoI.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figureLawtrades {
+                        background-image: url(https://framerusercontent.com/images/UbS7rWmAwWxjtwM7oaWwRuGo.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figureBaselorld {
+                        background-image: url(https://framerusercontent.com/images/hQVBeiDNGU2TfeDJALuhawlcto.jpg?scale-down-to=1024);
+                    }
+    
+                    &#figureNYCB {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                        object-fit: cover;
+                        position: relative;
+    
+                        div.imgHover {
+                            position: absolute;
+                            top: 0;
+                        }
+                    }
+    
+                    div.imgHover {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                        background-color: transparent;
+                        padding: 1rem;
+                        transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
+                        
+                        p {
+                            opacity: 0;
+                            color: white;
+                            z-index: 2;
+                            transition: opacity 0.4s ease-in-out;
+                        }
+                    }
+                }
+    
+                p {
+                    line-height: 1.5;
+    
+                    span {
+                        color: var(--dark-gray);
+                        margin-left: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    section#contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+        margin: clamp(3rem, 2.5vh, 5rem) 0;
+
+        h2 {
+            font-weight: 600;
+
+            &.opacity {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 2rem;
+        width: 100%;
+
+        @media screen and (min-width: 900px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        div#footerCopyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            @media screen and (min-width: 900px) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.875rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+
+            li {
+                flex: 1;
+                
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+}
