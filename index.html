@@ -12,6 +12,8 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>OH.Studio</title>
 </head>
 <body>
@@ -29,195 +31,201 @@
 
     <main>
 
-        <section id="hero">
-            <h1>A brand and product designer working with clients globally</h1>
-            <div id="expertise">
-                <p class="small">Expertise</p>
-                <ul>
-                    <li class="small">Branding</li>
-                    <li class="small">Product</li>
-                    <li class="small">Design Systems</li>
-                </ul>
-            </div>
-        </section>
+        <div id="home" class="active">
 
-        <section id="projects">
-
-            <article id="articleAire">
-                <a href="#">
-                    <figure id="figureAire">
+            <section id="hero" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out">
+                <h1>A brand and product designer working with clients globally</h1>
+                <div id="expertise">
+                    <p class="small">Expertise</p>
+                    <ul>
+                        <li class="small">Branding</li>
+                        <li class="small">Product</li>
+                        <li class="small">Design Systems</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section id="projects" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150" data-aos-easing="ease-in">
+    
+                <article id="articleAire" data-aos="fade-up" data-aos-duration="4000">
+                    <a href="#">
+                        <figure id="figureAire">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Aire</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Aire</p>
+                </article>
+    
+                <article id="articleCorrelated" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureCorrelated">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Correlated</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Correlated</p>
+                </article>
+    
+                <article id="articleChannel5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="articleChannel5">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Channel 5</p> 
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Channel 5</p>
+                </article>
+    
+                <article id="articleRonald" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureRonald">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Ronald Abram</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Ronald Abram</p>
+                </article>
+    
+                <article id="articlePropeller" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figurePropeller">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <video id="videoPropeller" autoplay muted loop playsinline>
+                                <source src="https://framerusercontent.com/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M.mp4">
+                            </video>
+                            <div class="imgHover">
+                                <p>Propeller</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Propeller</p>
+                </article>
+    
+                <article id="articleSchuh" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                    <figure id="figureSchuh">
                         <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
                         <div class="imgHover">
-                            <p>Aire</p>
+                            <p>Schuh</p>
                         </div>
                     </figure>
                     </a>
-                    <p>Aire</p>
-            </article>
+                    <p>Schuh</p>
+                </article>
+    
+                <article id="articlePaperstreet" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figurePaperstreet">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Paperstreet</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Paperstreet</p>
+                </article>
+    
+                <article id="articleOhSupply" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureOhSupply">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <video id="videoOhSupply" autoplay muted loop playsinline>
+                                <source src="https://framerusercontent.com/assets/SGjFvgcbK7s4yKh0xwuNjriMNII.mp4">
+                            </video>
+                            <div class="imgHover">
+                                <p>OH.SUPPLY</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>OH.SUPPLY</p>                
+                </article>
+    
+                <article id="articleMonokelEyewear" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureMonokelEyewear">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Monokel Eyewear</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Monokel Eyewear</p>
+                </article>
+    
+                <article id="articleLawtrades" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureLawtrades">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Lawtrades</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Lawtrades <span>Coming Soon</span> </p>
+                </article>
+    
+                <article id="articleBaselorld" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureBaselorld">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <div class="imgHover">
+                                <p>Baselorld</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>Baselorld <span>Coming Soon</span> </p>
+                </article>
+    
+                <article id="articleNYCB" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-in">
+                    <a href="#">
+                        <figure id="figureNYCB">
+                            <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
+                            <video id="videoNYCB" autoplay muted loop playsinline>
+                                <source src="https://framerusercontent.com/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg.mp4">
+                            </video>
+                            <div class="imgHover">
+                                <p>NYCB</p>
+                            </div>
+                        </figure>
+                        </a>
+                        <p>NYCB</p>
+                </article>
+    
+            </section>
+    
+            <section id="contact">
+                <h2>Let's work together.</h2>
+                <h2 class="opacity">Get in touch.</h2>
+            </section>
 
-            <article id="articleCorrelated">
-                <a href="#">
-                    <figure id="figureCorrelated">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Correlated</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Correlated</p>
-            </article>
-
-            <article id="articleChannel5">
-                <a href="#">
-                    <figure id="articleChannel5">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Channel 5</p> 
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Channel 5</p>
-            </article>
-
-            <article id="articleRonald">
-                <a href="#">
-                    <figure id="figureRonald">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Ronald Abram</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Ronald Abram</p>
-            </article>
-
-            <article id="articlePropeller">
-                <a href="#">
-                    <figure id="figurePropeller">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <video id="videoPropeller" autoplay muted loop playsinline>
-                            <source src="https://framerusercontent.com/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M.mp4">
-                        </video>
-                        <div class="imgHover">
-                            <p>Propeller</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Propeller</p>
-            </article>
-
-            <article id="articleSchuh">
-                <a href="#">
-                <figure id="figureSchuh">
-                    <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                    <div class="imgHover">
-                        <p>Schuh</p>
-                    </div>
-                </figure>
-                </a>
-                <p>Schuh</p>
-            </article>
-
-            <article id="articlePaperstreet">
-                <a href="#">
-                    <figure id="figurePaperstreet">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Paperstreet</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Paperstreet</p>
-            </article>
-
-            <article id="articleOhSupply">
-                <a href="#">
-                    <figure id="figureOhSupply">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <video id="videoOhSupply" autoplay muted loop playsinline>
-                            <source src="https://framerusercontent.com/assets/SGjFvgcbK7s4yKh0xwuNjriMNII.mp4">
-                        </video>
-                        <div class="imgHover">
-                            <p>OH.SUPPLY</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>OH.SUPPLY</p>                
-            </article>
-
-            <article id="articleMonokelEyewear">
-                <a href="#">
-                    <figure id="figureMonokelEyewear">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Monokel Eyewear</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Monokel Eyewear</p>
-            </article>
-
-            <article id="articleLawtrades">
-                <a href="#">
-                    <figure id="figureLawtrades">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Lawtrades</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Lawtrades <span>Coming Soon</span> </p>
-            </article>
-
-            <article id="articleBaselorld">
-                <a href="#">
-                    <figure id="figureBaselorld">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <div class="imgHover">
-                            <p>Baselorld</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>Baselorld <span>Coming Soon</span> </p>
-            </article>
-
-            <article id="articleNYCB">
-                <a href="#">
-                    <figure id="figureNYCB">
-                        <box-icon class="sphere" type='solid' name='circle' size="48px" color="#ffffff"></box-icon>
-                        <video id="videoNYCB" autoplay muted loop playsinline>
-                            <source src="https://framerusercontent.com/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg.mp4">
-                        </video>
-                        <div class="imgHover">
-                            <p>NYCB</p>
-                        </div>
-                    </figure>
-                    </a>
-                    <p>NYCB</p>
-            </article>
-
-        </section>
-
-        <section id="contact">
-            <h2>Let's work together.</h2>
-            <h2 class="opacity">Get in touch.</h2>
-        </section>
-
-        <footer>
-            <div id="footerCopyright">
-                <box-icon name='band-aid' type='solid' size="32px" color="#000000" animation='tada' ></box-icon>
-                <p class="small">© Oli Harris 2023</p>
-            </div>
-            
-            <ul>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Mail</a></li>
-            </ul>
-        </footer>
+        </div>
 
     </main>
 
+    <footer>
+        <div id="footerCopyright">
+            <box-icon name='band-aid' type='solid' size="32px" color="#000000" animation='tada' ></box-icon>
+            <p class="small">© Oli Harris 2023</p>
+        </div>
+        
+        <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+    </footer>
 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

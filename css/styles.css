@@ -225,7 +225,18 @@ main {
   align-items: center;
   justify-content: center;
 }
-main section#hero {
+main div#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+main div#home.active {
+  opacity: 1;
+}
+main div#home section#hero {
   margin-top: 2rem;
   width: 100%;
   height: 50vh;
@@ -237,17 +248,22 @@ main section#hero {
   padding: clamp(1.5rem, 5vw, 4rem);
   gap: 4rem;
 }
-main section#hero h1 {
+@media screen and (min-width: 900px) {
+  main div#home section#hero {
+    margin: 8rem 0 6rem;
+  }
+}
+main div#home section#hero h1 {
   font-weight: 600;
   max-width: 24ch;
   line-height: 1.2;
 }
 @media screen and (min-width: 900px) {
-  main section#hero h1 {
+  main div#home section#hero h1 {
     max-width: 16ch;
   }
 }
-main section#hero div#expertise {
+main div#home section#hero div#expertise {
   display: none;
   flex-direction: row;
   gap: 0.5rem;
@@ -255,23 +271,23 @@ main section#hero div#expertise {
   justify-content: space-between;
 }
 @media screen and (min-width: 900px) {
-  main section#hero div#expertise {
+  main div#home section#hero div#expertise {
     display: flex;
   }
 }
-main section#hero div#expertise ul {
+main div#home section#hero div#expertise ul {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
 }
-main section#hero div#expertise ul li {
+main div#home section#hero div#expertise ul li {
   padding: 0.5rem 1rem;
   background-color: var(--light-gray);
   border-radius: 9999px;
 }
-main section#projects {
+main div#home section#projects {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,12 +297,12 @@ main section#projects {
   padding: clamp(1.5rem, 5vw, 4rem);
 }
 @media screen and (min-width: 900px) {
-  main section#projects {
+  main div#home section#projects {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-main section#projects article {
+main div#home section#projects article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -296,11 +312,11 @@ main section#projects article {
   height: auto;
 }
 @media screen and (min-width: 900px) {
-  main section#projects article {
+  main div#home section#projects article {
     width: calc(50% - 1.5rem);
   }
 }
-main section#projects article a {
+main div#home section#projects article a {
   text-decoration: none;
   cursor: pointer;
   width: 100%;
@@ -310,7 +326,7 @@ main section#projects article a {
   padding: 0;
   margin: 0;
 }
-main section#projects article a figure, main section#projects article a video {
+main div#home section#projects article a figure, main div#home section#projects article a video {
   position: relative;
   width: 100%;
   aspect-ratio: 24/20;
@@ -322,20 +338,20 @@ main section#projects article a figure, main section#projects article a video {
   background-repeat: no-repeat;
   transition: filter 0.4s ease-in-out;
 }
-main section#projects article a figure:hover .imgHover, main section#projects article a video:hover .imgHover {
+main div#home section#projects article a figure:hover .imgHover, main div#home section#projects article a video:hover .imgHover {
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
-main section#projects article a figure:hover .imgHover p, main section#projects article a video:hover .imgHover p {
+main div#home section#projects article a figure:hover .imgHover p, main div#home section#projects article a video:hover .imgHover p {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
 }
-main section#projects article a figure:hover .sphere, main section#projects article a video:hover .sphere {
+main div#home section#projects article a figure:hover .sphere, main div#home section#projects article a video:hover .sphere {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
 }
-main section#projects article a figure .sphere, main section#projects article a video .sphere {
+main div#home section#projects article a figure .sphere, main div#home section#projects article a video .sphere {
   position: absolute;
   z-index: 2;
   right: 1rem;
@@ -343,19 +359,19 @@ main section#projects article a figure .sphere, main section#projects article a 
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
-main section#projects article a figure#figureAire, main section#projects article a video#figureAire {
+main div#home section#projects article a figure#figureAire, main div#home section#projects article a video#figureAire {
   background-image: url(https://framerusercontent.com/images/kfr022WaJ8YJUyZFmdwCB3pXhs.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figureCorrelated, main section#projects article a video#figureCorrelated {
+main div#home section#projects article a figure#figureCorrelated, main div#home section#projects article a video#figureCorrelated {
   background-image: url(https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#articleChannel5, main section#projects article a video#articleChannel5 {
+main div#home section#projects article a figure#articleChannel5, main div#home section#projects article a video#articleChannel5 {
   background-image: url(https://framerusercontent.com/images/AX9PukosNfGVcfXw3YapiYpl9g.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figureRonald, main section#projects article a video#figureRonald {
+main div#home section#projects article a figure#figureRonald, main div#home section#projects article a video#figureRonald {
   background-image: url(https://framerusercontent.com/images/BAXywubxN8sAhfJg3AgGgFI.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figurePropeller, main section#projects article a video#figurePropeller {
+main div#home section#projects article a figure#figurePropeller, main div#home section#projects article a video#figurePropeller {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -363,7 +379,7 @@ main section#projects article a figure#figurePropeller, main section#projects ar
      object-fit: cover;
   position: relative;
 }
-main section#projects article a figure#figurePropeller div.imgHover, main section#projects article a video#figurePropeller div.imgHover {
+main div#home section#projects article a figure#figurePropeller div.imgHover, main div#home section#projects article a video#figurePropeller div.imgHover {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -372,13 +388,13 @@ main section#projects article a figure#figurePropeller div.imgHover, main sectio
   top: 0;
   width: 100%;
 }
-main section#projects article a figure#figureSchuh, main section#projects article a video#figureSchuh {
+main div#home section#projects article a figure#figureSchuh, main div#home section#projects article a video#figureSchuh {
   background-image: url(https://framerusercontent.com/images/3WALBX7nnuG7p85CLjlVmWPDHw.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figurePaperstreet, main section#projects article a video#figurePaperstreet {
+main div#home section#projects article a figure#figurePaperstreet, main div#home section#projects article a video#figurePaperstreet {
   background-image: url(https://framerusercontent.com/images/e3moUZXfgtjYQY4ILakIMaz4n7s.jpg?scale-down-to=2048);
 }
-main section#projects article a figure#figureOhSupply, main section#projects article a video#figureOhSupply {
+main div#home section#projects article a figure#figureOhSupply, main div#home section#projects article a video#figureOhSupply {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -386,20 +402,20 @@ main section#projects article a figure#figureOhSupply, main section#projects art
      object-fit: cover;
   position: relative;
 }
-main section#projects article a figure#figureOhSupply div.imgHover, main section#projects article a video#figureOhSupply div.imgHover {
+main div#home section#projects article a figure#figureOhSupply div.imgHover, main div#home section#projects article a video#figureOhSupply div.imgHover {
   position: absolute;
   top: 0;
 }
-main section#projects article a figure#figureMonokelEyewear, main section#projects article a video#figureMonokelEyewear {
+main div#home section#projects article a figure#figureMonokelEyewear, main div#home section#projects article a video#figureMonokelEyewear {
   background-image: url(https://framerusercontent.com/images/aH1eUgCIIIrbJF7TUlaKAehoI.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figureLawtrades, main section#projects article a video#figureLawtrades {
+main div#home section#projects article a figure#figureLawtrades, main div#home section#projects article a video#figureLawtrades {
   background-image: url(https://framerusercontent.com/images/UbS7rWmAwWxjtwM7oaWwRuGo.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figureBaselorld, main section#projects article a video#figureBaselorld {
+main div#home section#projects article a figure#figureBaselorld, main div#home section#projects article a video#figureBaselorld {
   background-image: url(https://framerusercontent.com/images/hQVBeiDNGU2TfeDJALuhawlcto.jpg?scale-down-to=1024);
 }
-main section#projects article a figure#figureNYCB, main section#projects article a video#figureNYCB {
+main div#home section#projects article a figure#figureNYCB, main div#home section#projects article a video#figureNYCB {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -407,11 +423,11 @@ main section#projects article a figure#figureNYCB, main section#projects article
      object-fit: cover;
   position: relative;
 }
-main section#projects article a figure#figureNYCB div.imgHover, main section#projects article a video#figureNYCB div.imgHover {
+main div#home section#projects article a figure#figureNYCB div.imgHover, main div#home section#projects article a video#figureNYCB div.imgHover {
   position: absolute;
   top: 0;
 }
-main section#projects article a figure div.imgHover, main section#projects article a video div.imgHover {
+main div#home section#projects article a figure div.imgHover, main div#home section#projects article a video div.imgHover {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -421,51 +437,59 @@ main section#projects article a figure div.imgHover, main section#projects artic
   transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
   transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out, -webkit-backdrop-filter 0.4s ease-in-out;
 }
-main section#projects article a figure div.imgHover p, main section#projects article a video div.imgHover p {
+main div#home section#projects article a figure div.imgHover p, main div#home section#projects article a video div.imgHover p {
   opacity: 0;
   color: white;
   z-index: 2;
   transition: opacity 0.4s ease-in-out;
 }
-main section#projects article a p {
+main div#home section#projects article a p {
   line-height: 1.5;
 }
-main section#projects article a p span {
+main div#home section#projects article a p span {
   color: var(--dark-gray);
   margin-left: 0.25rem;
 }
-main section#contact {
+main div#home section#contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 1.5rem;
-  margin: clamp(3rem, 2.5vh, 5rem) 0;
+  margin: 3rem 0;
 }
-main section#contact h2 {
+@media screen and (min-width: 900px) {
+  main div#home section#contact {
+    margin: 0;
+    height: 50vh;
+  }
+}
+main div#home section#contact h2 {
   font-weight: 600;
 }
-main section#contact h2.opacity {
+main div#home section#contact h2.opacity {
   opacity: 0.5;
 }
-main footer {
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1.5rem 2rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  main footer {
+  footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 4rem 1.5rem;
   }
 }
-main footer div#footerCopyright {
+footer div#footerCopyright {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -473,14 +497,14 @@ main footer div#footerCopyright {
   gap: 1rem;
 }
 @media screen and (min-width: 900px) {
-  main footer div#footerCopyright {
+  footer div#footerCopyright {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 0.875rem;
   }
 }
-main footer ul {
+footer ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -488,10 +512,10 @@ main footer ul {
   justify-content: space-between;
   gap: 1.5rem;
 }
-main footer ul li {
+footer ul li {
   flex: 1;
 }
-main footer ul li a {
+footer ul li a {
   text-decoration: none;
   color: black;
 }/*# sourceMappingURL=styles.css.map */
