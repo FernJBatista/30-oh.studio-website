@@ -15,15 +15,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>OH.Studio</title>
+
+    <script src="index.js"></script>
 </head>
 <body>
 
     <header>
 
         <nav>
-                <button>Home</button>
-                <button>Profile</button>
-                <button>Contact</button>
+                <button id="homeButton" class="active">Home</button>
+                <button id="profileButton">Profile</button>
+                <button id="contactButton">Contact</button>
         </nav>
 
     </header>
@@ -32,7 +34,7 @@
     <main>
 
         <!-- Home page starts here -->
-        <div id="home">
+        <div id="home" class="active">
 
             <section id="hero" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out">
                 <h1>A brand and product designer working with clients globally</h1>
@@ -409,5 +411,6 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
+    
 </body>
 </html>

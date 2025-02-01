@@ -227,7 +227,11 @@ header nav button {
   cursor: pointer;
   background-color: transparent;
 }
-header nav button:hover, header nav button .active {
+header nav button:hover {
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+header nav button.active {
   background-color: white;
   transition: all 0.4s ease-in-out;
 }
