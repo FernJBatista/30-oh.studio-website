@@ -498,6 +498,30 @@ main {
                 }
             }
         }
+        
+        section.contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            margin: 3rem 0;
+    
+            @media screen and (min-width: 724px) {
+                margin: 0;
+                height: 50vh;
+    
+            }
+    
+            h2 {
+                font-weight: 600;
+    
+                &.opacity {
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 
     div#profile {
@@ -702,16 +726,42 @@ main {
                 }
             }
         }
+        section.contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            margin: 3rem 0;
+    
+            @media screen and (min-width: 724px) {
+                margin: 0;
+                height: 50vh;
+    
+            }
+    
+            h2 {
+                font-weight: 600;
+    
+                &.opacity {
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 
-    section#contact {
-        display: flex;
+    div#contactPage {
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
-        padding: 1.5rem;
-        margin: 3rem 0;
+        margin: 8rem 0 3rem;
+        transition: opacity 0.4s ease-in-out delay 0.4s;
+
+        &.active {
+            display: flex;
+        }
 
         @media screen and (min-width: 724px) {
             margin: 0;
@@ -721,6 +771,7 @@ main {
 
         h2 {
             font-weight: 600;
+            text-align: center;
 
             &.opacity {
                 opacity: 0.5;

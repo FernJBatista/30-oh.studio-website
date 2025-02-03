@@ -468,6 +468,27 @@ main div#home section#projects article a p span {
   color: var(--dark-gray);
   margin-left: 0.25rem;
 }
+main div#home section.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  margin: 3rem 0;
+}
+@media screen and (min-width: 724px) {
+  main div#home section.contact {
+    margin: 0;
+    height: 50vh;
+  }
+}
+main div#home section.contact h2 {
+  font-weight: 600;
+}
+main div#home section.contact h2.opacity {
+  opacity: 0.5;
+}
 main div#profile {
   display: none;
   flex-direction: column;
@@ -651,7 +672,7 @@ main div#profile section#clients div.content div.item img {
 main div#profile section#clients div.content div.item img.invert {
   filter: invert(0%);
 }
-main section#contact {
+main div#profile section.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -661,15 +682,39 @@ main section#contact {
   margin: 3rem 0;
 }
 @media screen and (min-width: 724px) {
-  main section#contact {
+  main div#profile section.contact {
     margin: 0;
     height: 50vh;
   }
 }
-main section#contact h2 {
+main div#profile section.contact h2 {
   font-weight: 600;
 }
-main section#contact h2.opacity {
+main div#profile section.contact h2.opacity {
+  opacity: 0.5;
+}
+main div#contactPage {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8rem 0 3rem;
+  transition: opacity 0.4s ease-in-out delay 0.4s;
+}
+main div#contactPage.active {
+  display: flex;
+}
+@media screen and (min-width: 724px) {
+  main div#contactPage {
+    margin: 0;
+    height: 50vh;
+  }
+}
+main div#contactPage h2 {
+  font-weight: 600;
+  text-align: center;
+}
+main div#contactPage h2.opacity {
   opacity: 0.5;
 }
 

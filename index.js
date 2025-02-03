@@ -7,38 +7,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     buttonArr.forEach((button) => {
         button.addEventListener("click", function() {
-            // First remove the active class from all buttons
-            buttonArr.forEach((button) => {
-                button.classList.remove("active");
+            // Only change active state if the clicked button is not already active
+            if (!this.classList.contains("active")) {
+                buttonArr.forEach((btn) => {
+                    btn.classList.remove("active");
+                    this.classList.add("active");
+                });
+            };
 
-                // Add the active class to the button that was clicked
-                this.classList.toggle("active");
-            });
-            
-
-            // Get the pages
+            // Get the corresponding pages
             const home = document.getElementById("home");
             const profile = document.getElementById("profile");
-            const contact = document.getElementById("contact");
+            const contact = document.getElementById("contactPage");
 
-            // Activate the corresponding page
+            //Remove active from all pages
+            home.classList.remove("active");
+            profile.classList.remove("active");
+            contact.classList.remove("active");
+
+            // Add active to the clicked page
             if (this.id === "homeButton") {
-                home.classList.toggle("active");
-                profile.classList.remove("active");
-                contact.classList.remove("active");
+                home.classList.add("active");
             } else if (this.id === "profileButton") {
-                home.classList.remove("active");
-                profile.classList.toggle("active");
-                contact.classList.remove("active");
+                profile.classList.add("active");
             } else if (this.id === "contactButton") {
-                this.classList.toggle("active");
-                home.classList.remove("active");
-                profile.classList.remove("active");
-            } else {
-                home.classList.remove("active");
-                profile.classList.remove("active");
-                contact.classList.remove("active");
+                contact.classList.add("active");
             }
+
+            // Refresh AOS after a short delay to re-calculate the positions
+            setTimeout(() => {
+                AOS.refresh();
+            }, 50);
         });
     });
 });
